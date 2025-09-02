@@ -1,4 +1,3 @@
-
 # Data Analysis App
 
 ## Table of Contents
@@ -8,15 +7,10 @@
 - [Features and Walkthrough](#features-and-walkthrough)  
 - [Design Decisions](#design-decisions)  
 
-
-
 ## Purpose
 The **Data Analysis App** is a Flask-based dashboard that analyzes **donation** and **consumer** datasets. It provides **interactive data visualizations** and **forecasting models** to identify patterns and predict future needs.  
 
 Built with **Flask**, **Matplotlib**, and **XGBoost**, this project demonstrates skills in web development, data preprocessing, machine learning, and visualization.  
-
-
-
 ## System Requirements
 
 **Prerequisites:**  
@@ -24,10 +18,8 @@ Before running the project locally, install:
 
 - **Python (3.9 or later)** – Required to run the Flask backend.  
 - **pip** – Comes with Python, used to install dependencies.  
-- **Git** – Required to clone the repository and manage version control.  
-
-
-
+- **Git** – Required to clone the repository and manage version control.
+- 
 ## Installation Guide
 
 1. **Clone the Repository**
@@ -94,9 +86,7 @@ Access at: [http://127.0.0.1:5000](http://127.0.0.1:5000)
 - Interactive dropdown to choose lag periods (**12, 18, 24, 30 months**).  
 - Uses **XGBoost** to forecast donations and consumption for the next 24 months.  
 - Displays two plots: **Donation Forecast** and **Consumer Forecast**.
-
-  <img width="1469" height="448" alt="image" src="https://github.com/user-attachments/assets/a9aa2548-5201-406a-aebf-be416fb61930" />
-
+ <img width="1469" height="448" alt="image" src="https://github.com/user-attachments/assets/a9aa2548-5201-406a-aebf-be416fb61930" />
 
 #### Donation Forecast
 <img width="1343" height="702" alt="image" src="https://github.com/user-attachments/assets/31d961c7-889f-4b8a-86f3-0dc770a4b960" />
