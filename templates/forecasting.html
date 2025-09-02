@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Interactive Forecasting</h2>
+<form method="POST" action="/forecasting">
+    <label for="n_lags">Select the number of months to use for forecasting:</label>
+    <select id="n_lags" name="n_lags" class="form-control mb-3">
+        <option value="12" {% if n_lags == 12 %}selected{% endif %}>12 months</option>
+        <option value="18" {% if n_lags == 18 %}selected{% endif %}>18 months</option>
+        <option value="24" {% if n_lags == 24 %}selected{% endif %}>24 months</option>
+        <option value="30" {% if n_lags == 30 %}selected{% endif %}>30 months</option>
+    </select>
+    <button type="submit" class="btn btn-primary">Generate Forecast</button>
+</form>
+
+{% if donation_plot_url %}
+<h3>Donation Forecast</h3>
+<img src="data:image/png;base64,{{ donation_plot_url }}" alt="Donation Forecast" class="img-fluid">
+<p>
+    <strong>Insights:</strong> The donation forecast is based on the selected no. of months,
+    reflecting predictions using the past number of months chosen by the user.
+</p>
+{% endif %}
+
+{% if consumer_plot_url %}
+<h3>Consumer Forecast</h3>
+<img src="data:image/png;base64,{{ consumer_plot_url }}" alt="Consumer Forecast" class="img-fluid">
+<p>
+    <strong>Insights:</strong> The consumer forecast is based on the selected no. of months,
+    reflecting predictions using the past number of months chosen by the user.
+</p>
+{% endif %}
+{% endblock %}
